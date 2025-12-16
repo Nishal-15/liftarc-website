@@ -12,12 +12,10 @@ export default function Hero() {
           manufacturing, infrastructure, and commercial projects across
           Coimbatore.
         </p>
-<div className="hero-actions">
-  <a href="#contact" className="hero-btn">
-    Get in Touch
-  </a>
-</div>
 
+        <a href="#contact">
+          <button>Get in Touch</button>
+        </a>
       </div>
     </section>
   );
