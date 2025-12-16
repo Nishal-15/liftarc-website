@@ -383,24 +383,7 @@ footer {
     padding: 6px 10px;
   }
 
-  .hero-actions {
-  margin-top: 32px;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: var(--safety-orange);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-}
-
-.hero-btn:hover {
-  background: #d94d1f;
-}
-
+  
   .hero-overlay {
     padding: 48px 20px;
     text-align: center;
@@ -547,32 +530,4 @@ footer {
     width: 140px;
     height: 140px;
   }
-}
-/* ===== LEADERSHIP / TEAM ===== */
-.leader-wrapper {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 36px;
-  max-width: 900px;
-  margin: 40px auto 0;
-  align-items: start;
-}
-
-.leader-image img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #f15a24;
-}
-
-.leader-content h3 {
-  margin: 0;
-  color: #0b1f33;
-}
-
-.leader-title {
-  font-weight: 600;
-  color: #f15a24;
-  margin-bottom: 12px;
 }
