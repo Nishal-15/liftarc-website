@@ -1,54 +1,44 @@
-export default function Team() {
+export default function WhyChoose() {
   return (
-    <section className="team" id="team">
-      <h2>Leadership</h2>
+    <section className="why" id="why">
+      <h2>Why Choose LiftArc Industries</h2>
 
-      <div
-        className="team-grid"
-        style={{
-          maxWidth: "420px",
-          margin: "0 auto",
-        }}
-      >
-        <div className="card" style={{
-          width:"1500px"
-        }}>
-          {/* CEO Image */}
-          <img
-            src="/ceo.png"
-            alt="Proprietor – LiftArc Industries"
-            style={{
-              width: "150px",
-              height: "150px",
-              borderRadius: "50%",
-              objectFit: "cover",
-              marginBottom: "18px",
-              marginLeft:"-550px"
-              
-            }}
-          />
-          </div></div>
-        <div style ={{ textAlign: "left" }}>
-          {/* CEO Title */}
-          <h4>Mr. Ramar P</h4>
-
-          {/* CEO Profile */}
+      <div className="why-grid">
+        <div className="card">
+          <h4>10+ Years of Proven Industry Experience</h4>
           <p>
-            With over <strong>10+ years of industry experience</strong>, the
-            leadership at LiftArc Industries brings a balanced background in
-            technical execution and operational management. The focus remains
-            on delivering consistent quality, maintaining high safety
-            standards, and ensuring reliable project execution across all
-            assignments.
+            A decade of hands-on involvement across industrial and commercial
+            projects has enabled us to develop reliable execution methods,
+            disciplined processes, and consistent quality outcomes.
           </p>
+        </div>
 
+        <div className="card">
+          <h4>Skilled & Certified Workforce</h4>
           <p>
-            Under this leadership, the organization emphasizes client
-            satisfaction, disciplined workflows, and continuous improvement to
-            support long-term partnerships and sustainable growth.
+            Our team consists of trained technicians and supervisors with
+            practical field expertise, ensuring controlled workmanship and
+            adherence to established technical standards.
           </p>
-          </div>
-       
+        </div>
+
+        <div className="card">
+          <h4>Strong Quality & Safety Focus</h4>
+          <p>
+            Every assignment is executed with emphasis on structural integrity,
+            precision finishing, and safe working practices to ensure durability
+            and compliance.
+          </p>
+        </div>
+
+        <div className="card">
+          <h4>Reliable Execution & Timely Delivery</h4>
+          <p>
+            Projects are planned with clear timelines and efficient coordination,
+            enabling dependable delivery without unnecessary delays.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
