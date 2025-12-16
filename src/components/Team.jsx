@@ -3,7 +3,13 @@ export default function Team() {
     <section className="team" id="team">
       <h2>Leadership</h2>
 
-      <div>
+      <div
+        className="team-grid"
+        style={{
+          maxWidth: "420px",
+          margin: "0 auto",
+        }}
+      >
         <div>
           {/* CEO Image */}
           <img
