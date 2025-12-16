@@ -10,9 +10,7 @@ export default function Team() {
           margin: "0 auto",
         }}
       >
-        <div className="card" style={{
-          width:"1500px"
-        }}>
+        <div>
           {/* CEO Image */}
           <img
             src="/ceo.png"
@@ -23,7 +21,7 @@ export default function Team() {
               borderRadius: "50%",
               objectFit: "cover",
               marginBottom: "18px",
-              marginLeft:"-550px"
+              marginLeft:"-525px"
               
             }}
           />

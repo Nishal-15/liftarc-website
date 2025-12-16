@@ -1,22 +1,48 @@
 export default function Careers() {
   return (
     <section className="careers" id="careers">
-      <h2>Careers</h2>
+      <h2>Careers at LiftArc Industries</h2>
 
-      <p className="careers-desc">
-        LiftArc Industries offers opportunities for professionals seeking growth
-        in an industrial working environment. We value precision workmanship,
-        safety awareness, and technical discipline.
-      </p>
+      <div className="careers-grid">
+        <div className="career-card">
+          <h3>Skilled Welding Technicians</h3>
+          <p>
+            Professionals experienced in structural and industrial welding,
+            capable of delivering precision joints for load-bearing frames,
+            assemblies, and engineered metal structures.
+          </p>
+        </div>
 
-      <ul className="careers-list">
-        <li>Skilled Welding Technicians</li>
-        <li>Fabrication & Assembly Technicians</li>
-        <li>Site Support Personnel</li>
-      </ul>
+        <div className="career-card highlight">
+          <h3>Fabrication & Assembly Technicians</h3>
+          <p>
+            Hands-on technicians skilled in metal fabrication, component fitting,
+            and assembly based on engineering drawings and production standards.
+          </p>
+        </div>
 
-      <p className="careers-apply">
-        Interested candidates may contact us for further details.
+        <div className="career-card">
+          <h3>Site Support Personnel</h3>
+          <p>
+            On-site support staff responsible for installation assistance,
+            coordination activities, and execution support during industrial
+            projects and infrastructure works.
+          </p>
+        </div>
+
+        <div className="career-card">
+          <h3>Operations & Project Support</h3>
+          <p>
+            Personnel supporting project execution, quality control, safety
+            adherence, and coordination across workshop and site operations.
+          </p>
+        </div>
+      </div>
+
+      <p className="careers-footer">
+        Candidates with relevant experience, strong safety awareness, and a
+        commitment to quality workmanship are encouraged to connect with us via
+        the <strong>Contact</strong> section.
       </p>
     </section>
   );

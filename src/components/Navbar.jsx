@@ -1,51 +1,65 @@
 import { useEffect, useState } from "react";
 
+const SECTIONS = ["home", "about", "services", "projects", "contact"];
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px", // center of viewport
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.6, // 60% of section visible
-      }
+      observerCallback,
+      observerOptions
     );
 
-    sections.forEach((section) => observer.observe(section));
+    SECTIONS.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
 
     return () => observer.disconnect();
   }, []);
 
   return (
     <header className="navbar">
-      <img src="/logo.png" alt="LiftArc Industries" />
+      <div className="nav-left">
+        <img src="/logo.png" alt="LiftArc Industries" />
+      </div>
 
-      <nav>
-        <a href="#home" className={activeSection === "home" ? "active" : ""}>
-          Home
-        </a>
-        <a href="#about" className={activeSection === "about" ? "active" : ""}>
-          About
-        </a>
-        <a href="#services" className={activeSection === "services" ? "active" : ""}>
-          Services
-        </a>
-        <a href="#projects" className={activeSection === "projects" ? "active" : ""}>
-          Projects
-        </a>
-        <a href="#contact" className={activeSection === "contact" ? "active" : ""}>
-          Contact
-        </a>
+      {/* Hamburger */}
+      <button
+        className="nav-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
+
+      <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+        {SECTIONS.map((id) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={activeSection === id ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
+            {id.charAt(0).toUpperCase() + id.slice(1)}
+          </a>
+        ))}
       </nav>
     </header>
   );
