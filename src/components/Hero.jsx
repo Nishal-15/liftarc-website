@@ -1,22 +1,21 @@
-import { useNavigate } from "react-router-dom";
-
 export default function Hero() {
-  const navigate = useNavigate();
-
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-overlay">
-        <h1>Precision Welding & Sheet Metal Fabrication</h1>
+        <h1>
+          Precision Welding & <span>Industrial Metal Solutions</span>
+        </h1>
 
         <p>
-          LiftArc Industries delivers reliable welding and fabrication solutions
-          with 10 years of industry experience, serving industrial and commercial
-          clients in Coimbatore.
+          LiftArc Industries delivers engineered metal joining and structural
+          solutions with over 10 years of proven industry experience, supporting
+          manufacturing, infrastructure, and commercial projects across
+          Coimbatore.
         </p>
 
-        <button onClick={() => navigate("/contact")}>
-          Get in Touch
-        </button>
+        <a href="#contact">
+          <button>Get in Touch</button>
+        </a>
       </div>
     </section>
   );

@@ -1,24 +1,51 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.6, // 60% of section visible
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className="navbar">
-      <div className="logo">
-        <Link to="/">
-          <img
-            src="/logo.png"
-            alt="LiftARC Industries Logo"
-            className="logo-img"
-          />
-        </Link>
-      </div>
+      <img src="/logo.png" alt="LiftArc Industries" />
 
-      <nav className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/careers">Careers</Link>
-        <Link to="/contact">Contact</Link>
+      <nav>
+        <a href="#home" className={activeSection === "home" ? "active" : ""}>
+          Home
+        </a>
+        <a href="#about" className={activeSection === "about" ? "active" : ""}>
+          About
+        </a>
+        <a href="#services" className={activeSection === "services" ? "active" : ""}>
+          Services
+        </a>
+        <a href="#projects" className={activeSection === "projects" ? "active" : ""}>
+          Projects
+        </a>
+        <a href="#contact" className={activeSection === "contact" ? "active" : ""}>
+          Contact
+        </a>
       </nav>
     </header>
   );

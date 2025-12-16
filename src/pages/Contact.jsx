@@ -1,26 +1,27 @@
 export default function Contact() {
   return (
-    <section className="contact">
-      <h1>Contact LiftArc Industries</h1>
+    <section className="contact" id="contact">
+      <h2>Contact LiftArc Industries</h2>
 
       <p className="contact-desc">
-        For welding and sheet metal fabrication enquiries, please fill out the
-        form below. Our team will contact you shortly.
+        For project discussions, technical inquiries, or service requirements,
+        please reach out to us using the details below or submit the enquiry
+        form. Our team will respond promptly with the necessary information.
       </p>
 
       <div className="contact-grid">
         {/* Contact Info */}
         <div className="contact-info">
-          <h3>Our Address</h3>
+          <h3>Office Address</h3>
           <p>
             33C, Kunnathur Kavunder Complex,<br />
-            Thottipalyam Road,<br />
+            Thottipalayam Road,<br />
             Coimbatore – 641014
           </p>
 
-          <h3>Contact</h3>
-          <p>Phone: +91 7708084027</p>
-          <p>Email: liftarc@gmail.com</p>
+          <h3>Get in Touch</h3>
+          <p>Phone: +91 77080 84027</p>
+          <p>Email: salesliftarcindustries@gmail.com</p>
         </div>
 
         {/* WORKING FORM */}
@@ -52,7 +53,7 @@ export default function Contact() {
 
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="Briefly describe your requirement"
             rows="5"
             required
           ></textarea>
