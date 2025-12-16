@@ -21,7 +21,7 @@ export default function Team() {
               borderRadius: "50%",
               objectFit: "cover",
               marginBottom: "18px",
-              marginLeft:"-525px"
+              marginLeft:"-550px"
               
             }}
           />
