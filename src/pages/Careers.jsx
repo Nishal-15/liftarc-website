@@ -13,7 +13,7 @@ export default function Careers() {
           </p>
         </div>
 
-        <div className="career-card">
+        <div className="career-cardt">
           <h3>Fabrication & Assembly Technicians</h3>
           <p>
             Hands-on technicians skilled in metal fabrication, component fitting,

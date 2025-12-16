@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero-overlay">
         <h1>
-          Precision Welding & <span>Industrial Metal Solutions</span>
+          Precision Welding & Industrial Metal Solutions
         </h1>
 
         <p>
